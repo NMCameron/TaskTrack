@@ -16,13 +16,18 @@ def add_task(tasks):
     """Prompt the user for a task and add it to the task list."""
     task = input("Enter a new task: ")
     tasks.append(task)
+    print("Task added successfully.")
 
 
 def view_tasks(tasks):
     """Display all tasks currently stored in the task list."""
-    #TODO: Complete this function in Step 9.
-    pass
-
+    if not tasks:
+        print("No tasks found.")
+        return
+    
+    print("\nTasks:")
+    for i, task in enumerate(tasks, start=1):
+        print(f"{i}. {task}")
 
 def main():
     """Run the TaskTrack menu until the user chooses to exit."""
