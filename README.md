@@ -30,3 +30,6 @@ Exit the program once you are done
 
 ## Current Limitation
 Tasks can only be added to the list and not removed.
+
+## Version Control
+This project uses Git locally, before pushing to GitHub as its remote repository 
