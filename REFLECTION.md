@@ -4,7 +4,7 @@
 
 What is the difference between the local TaskTrack repository and the repository hosted on GitHub?  
 
-The local repository is a copy of the projected stored on your computer where you can edit and make commits. The remote repository is an online copy, making it easier to share or back up.
+The local repository is a copy of the project stored on your computer where you can edit and make commits. The remote repository is an online copy, making it easier to share or back up.
 
 ## 2. Connecting and Pushing
 
