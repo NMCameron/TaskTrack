@@ -1,6 +1,7 @@
 # ICA04 Reflection
 
 ## 1. Local and Remote Repositories
+
 What is the difference between the local TaskTrack repository and the repository hosted on GitHub?  
 
 The local repository is a copy of the projected stored on your computer where you can edit and make commits. The remote repository is an online copy, making it easier to share or back up.
@@ -22,8 +23,9 @@ When you clone a repository you can see the log for the project. A zip file only
 What information did `git fetch` update, and what additional action did `git pull` perform?  
 
 `git fetch` checked our local git against the one stored on GitHub without the files. `git pull` pulled the version off of GitHub and stored it in our clone.
+
 ## 5. Focused Commits
 
 Why is it useful to commit the Python feature, sample task data, and README documentation separately?  
 
-It kept our commits seperate, and easier to backtrack in case any issue arose. 
+Keeping our commits seperate allows us to understand the project easier, and backtrack when needed. It also helps when we might need to review or change a commit without changing the other files. 
