@@ -1,6 +1,3 @@
-Complete ICA04
+Complete ICAs
 Review GitHub commands
-Update the TaskTrack README
-Test task persistence
 Confirm task persistence
-Confirm task validation
