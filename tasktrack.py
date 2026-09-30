@@ -102,7 +102,7 @@ def main():
             print("Goodbye!")
             break
         else:
-            print("Please enter 1, 2, 3, or 4.")
+            print("Error: Invalid selection.\nPlease pick an option 1-4.")
 
 
 if __name__ == "__main__":
