@@ -5,6 +5,8 @@ Course: CPS 310
 """
 TASKS_FILE = "tasks.txt"
 
+
+
 def display_menu():
     """Display the available TaskTrack menu options."""
     print("\nTaskTrack Menu")
@@ -12,6 +14,7 @@ def display_menu():
     print("2. Add task")
     print("3. Remove task")
     print("4. Exit")
+
 
 
 def add_task(tasks):
@@ -24,6 +27,7 @@ def add_task(tasks):
         print("Task added successfully.")
 
 
+
 def view_tasks(tasks):
     """Display all tasks currently stored in the task list."""
     if not tasks:
@@ -33,6 +37,8 @@ def view_tasks(tasks):
     print("\nTasks:")
     for i, task in enumerate(tasks, start=1):
         print(f"{i}. {task}")
+
+
 
 def load_tasks(filename):
     """Load tasks from a text file and return them as a list."""
@@ -50,11 +56,30 @@ def load_tasks(filename):
 
     return tasks
 
+
+
 def save_tasks(tasks, filename):
     """Save all tasks to a text file."""
     with open(filename, "w") as file:
         for task in tasks:
                 file.write(f"{task}\n")
+
+
+
+def remove_task_by_number(tasks, task_number):
+    """Remove a task by its displayed number and return the removed task.
+
+    Return None when the task number is outside the valid range.
+    """
+    #TODO: Validate the task number.
+    #TODO: Remove and return the selected task.
+
+    if task_number <= 0 or task_number > len(tasks):
+        return None
+
+    return tasks.pop(task_number - 1)
+
+
 
 def remove_task(tasks):
     """
@@ -73,14 +98,16 @@ def remove_task(tasks):
     
     task_number = int(selection)
 
-    if (task_number <= 0 or task_number > len(tasks)):
+    removed_task = remove_task_by_number(tasks, task_number)
+
+    if removed_task is None:
         print("Error. Task does not exist.")
         return False
-    
-    removed_task = tasks.pop(task_number - 1)
 
     print(f"Successfully removed {task_number}. {removed_task}")
     return True
+
+
 
 def main():
     """Run the TaskTrack menu until the user chooses to exit."""
@@ -103,6 +130,7 @@ def main():
             break
         else:
             print("Error: Invalid selection.\nPlease pick an option 1-4.")
+
 
 
 if __name__ == "__main__":
